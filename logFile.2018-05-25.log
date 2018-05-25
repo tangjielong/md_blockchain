@@ -1,0 +1,939 @@
+634  [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 11828 (started by lenovo in E:\学习区块链\md_blockchain)
+640  [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+697  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 17:57:00 CST 2018]; root of context hierarchy
+3242 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec640fd3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3787 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+3796 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3797 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+3906 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3908 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3211 ms
+4086 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+4090 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+4090 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+4091 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+4092 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+4429 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+4442 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+4527 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+4528 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+4529 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+4573 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+4730 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4741 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4760 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+5143 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+5152 [main] INFO  o.h.t.s.e.i.InformationExtractorJdbcDatabaseMetaDataImpl - HHH000262: Table not found: message
+5390 [main] INFO  o.h.t.s.e.i.InformationExtractorJdbcDatabaseMetaDataImpl - HHH000262: Table not found: sync
+5606 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+6566 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+7120 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 17:57:00 CST 2018]; root of context hierarchy
+7192 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+7194 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+7195 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+7196 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+7196 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+7197 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+7197 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+7198 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+7199 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+7202 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+7202 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+7231 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+7231 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+7268 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+7512 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+7528 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+7581 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+8082 [pool-3-thread-1] ERROR c.m.b.socket.client.ClientStarter - 不是合法有效的已注册的客户端
+8084 [Thread-388] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 17:57:00 CST 2018]; root of context hierarchy
+8086 [Thread-388] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+764  [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 11352 (started by lenovo in E:\学习区块链\md_blockchain)
+774  [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+831  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:10:26 CST 2018]; root of context hierarchy
+2844 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$98b8a232] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3390 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+3399 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3400 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+3492 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3493 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2662 ms
+3650 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+3654 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+3655 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+3656 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+3656 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+4014 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+4025 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+4082 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+4084 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+4085 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+4117 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+4224 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4233 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4253 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+4558 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+4706 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+5476 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+5776 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:10:26 CST 2018]; root of context hierarchy
+5849 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+5851 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+5851 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+5852 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+5852 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+5853 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+5853 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+5854 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+5855 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+5856 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+5857 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+5883 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5883 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5914 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6117 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+6132 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+6135 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+6185 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+6737 [pool-3-thread-1] ERROR c.m.b.socket.client.ClientStarter - 不是合法有效的已注册的客户端
+6738 [Thread-388] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:10:26 CST 2018]; root of context hierarchy
+6740 [Thread-388] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+1026 [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 23940 (started by lenovo in E:\学习区块链\md_blockchain)
+1034 [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+1102 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:15:13 CST 2018]; root of context hierarchy
+695  [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 3204 (started by lenovo in E:\学习区块链\md_blockchain)
+702  [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+771  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:15:20 CST 2018]; root of context hierarchy
+2600 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3d23f2c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3207 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+3216 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3217 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+3319 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3321 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2550 ms
+3466 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+3470 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+3471 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+3472 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+3473 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+3806 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+3817 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+3873 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+3876 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+3877 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+3910 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+4021 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4028 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4047 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+4517 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+4663 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+5488 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+5794 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:15:20 CST 2018]; root of context hierarchy
+5852 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+5854 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+5854 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+5855 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+5856 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+5857 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+5857 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+5858 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+5859 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+5862 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+5862 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+5897 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5897 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5930 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6135 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+6148 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+6189 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+6591 [pool-3-thread-1] ERROR c.m.b.socket.client.ClientStarter - 不是合法有效的已注册的客户端
+6592 [Thread-388] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:15:20 CST 2018]; root of context hierarchy
+6601 [Thread-388] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+1014 [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 7468 (started by lenovo in E:\学习区块链\md_blockchain)
+1023 [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+1079 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:28:18 CST 2018]; root of context hierarchy
+3054 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$98b8a232] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4003 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+4014 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+4017 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+4109 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+4109 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3030 ms
+4274 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+4278 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+4281 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+4283 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+4283 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+4601 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+4612 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+4670 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+4672 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+4673 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+4706 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+4819 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4825 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4845 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+5173 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+5305 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+6124 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+6448 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:28:18 CST 2018]; root of context hierarchy
+6507 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+6509 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+6509 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+6510 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+6511 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+6512 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+6513 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+6514 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+6515 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+6517 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+6518 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+6543 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6543 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6589 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6851 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+6864 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+6867 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+6913 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+7159 [pool-3-thread-1] ERROR c.m.b.socket.client.ClientStarter - 不是合法有效的已注册的客户端
+7175 [Thread-388] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 18:28:18 CST 2018]; root of context hierarchy
+7179 [Thread-388] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+890  [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 2364 (started by lenovo in E:\学习区块链\md_blockchain)
+896  [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+953  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:36:56 CST 2018]; root of context hierarchy
+2960 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$98b8a232] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3621 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+3630 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3631 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+3720 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3722 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2769 ms
+3852 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+3857 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+3858 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+3859 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+3860 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+4184 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+4196 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+4257 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+4258 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+4259 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+4299 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+4424 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4435 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4462 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+4769 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+4912 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+5951 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+6256 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:36:56 CST 2018]; root of context hierarchy
+6310 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+6313 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+6313 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+6314 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+6314 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+6316 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+6317 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+6318 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+6318 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+6320 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+6321 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+6349 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6350 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6388 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6591 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+6606 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+6609 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+6665 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+6819 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 本机IP：10.6.0.48
+6898 [pool-3-thread-1] ERROR c.m.b.socket.client.ClientStarter - 不是合法有效的已注册的客户端
+6899 [Thread-388] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:36:56 CST 2018]; root of context hierarchy
+6901 [Thread-388] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+782  [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 2548 (started by lenovo in E:\学习区块链\md_blockchain)
+789  [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+843  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:39:04 CST 2018]; root of context hierarchy
+2444 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$879cf883] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3014 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+3023 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3024 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+3232 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3234 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2391 ms
+3443 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+3448 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+3448 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+3450 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+3450 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+3765 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+3775 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+3831 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+3832 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+3833 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+3866 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+3968 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+3980 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+3996 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+4324 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+4451 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+5302 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+5608 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:39:04 CST 2018]; root of context hierarchy
+5661 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+5663 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+5663 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+5664 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+5665 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+5666 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+5666 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+5667 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+5668 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+5670 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+5671 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+5696 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5696 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5728 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5920 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+5934 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+5938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+5979 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+6134 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 本机IP：10.6.0.48
+6229 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 共有2个成员需要连接：[Member{appId='wolf', name='maida', ip='10.6.0.48'}, Member{appId='mingyi', name='mingyi', ip='10.1.0.187'}]
+6237 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 开始绑定:10.1.0.187:6789
+6239 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:0, closed:0, received:(0p)(0b), handled:0, sent:(0p)(0b)
+8243 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 绑定10.1.0.187:6789失败
+8244 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 开始绑定:10.6.0.48:6789
+8244 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:0, closed:0, received:(0p)(0b), handled:0, sent:(0p)(0b)
+8258 [tio-group-1] INFO  c.m.b.s.s.BlockServerAioListener - onAfterConnected channelContext:10.6.0.48:56413, isConnected:true, isReconnect:false
+10245 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 绑定10.6.0.48:6789失败
+10245 [tio-group-2] INFO  o.t.c.ConnectionCompletionHandler - connected to 10.6.0.48:6789
+10246 [tio-group-2] INFO  c.m.b.s.c.BlockClientAioListener - 连接成功：server地址为-10.6.0.48:6789
+10281 [pool-3-thread-1] INFO  c.m.b.c.manager.PermissionManager - 所有的权限信息：{message=[Permission{tableName='message', permissionType=2, publicKey='*', groupId='1'}]}
+11983 [main] INFO  c.m.b.socket.client.ClientStarter - 开始群发信息获取next Block
+11984 [main] INFO  c.m.b.MdBlockchainApplication - Started MdBlockchainApplication in 11.678 seconds (JVM running for 12.332)
+11990 [tio-group-3] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+12003 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+12009 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+12019 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+12019 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+12020 [tio-group-5] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiIyM2Q5MjFmOC1iMzZkLTRlNTQtYjhmMC1jNTU0MDllY2E1M2IiLCJyZXNwb25zZU1zZ0lkIjoiMTVjZTAxODQtYjU1OC00OTg5LTgzOWUtNjM5Y2MzNTc4ZGU2IiwidGltZSI6MTUyNzI0ODM1NjEwOX0=","byteCount":0,"fromCluster":false,"id":4,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+27249 [tio-group-7] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+27250 [tio-group-7] INFO  org.tio.core.ChannelContext - java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException: null
+	at sun.nio.ch.AsynchronousSocketChannelImpl.getLocalAddress(AsynchronousSocketChannelImpl.java:449)
+	at org.tio.client.ClientChannelContext.createClientNode(ClientChannelContext.java:45)
+	at org.tio.core.ChannelContext.setAsynchronousSocketChannel(ChannelContext.java:407)
+	at org.tio.core.ChannelContext.init(ChannelContext.java:289)
+	at org.tio.core.ChannelContext.<init>(ChannelContext.java:109)
+	at org.tio.client.ClientChannelContext.<init>(ClientChannelContext.java:30)
+	at org.tio.client.ConnectionCompletionHandler.handler(ConnectionCompletionHandler.java:110)
+	at org.tio.client.ConnectionCompletionHandler.failed(ConnectionCompletionHandler.java:46)
+	at org.tio.client.ConnectionCompletionHandler.failed(ConnectionCompletionHandler.java:24)
+	at sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:128)
+	at sun.nio.ch.Invoker$2.run(Invoker.java:218)
+	at sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+27251 [tio-group-7] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+34255 [tio-client-reconn-1] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2000 ms
+35938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+35939 [tio-group-8] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+35941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+35942 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+35942 [tio-group-10] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI5ODVlYjhjMy05NTFjLTQyYzUtYjdmZi0yZjVlOGRiNGQ4ZTgiLCJyZXNwb25zZU1zZ0lkIjoiNjI2NjA4MWQtMDdlNi00YzNjLTlmOWYtOTUyODVmZGVhZmVhIiwidGltZSI6MTUyNzI0ODM4MDA0OH0=","byteCount":0,"fromCluster":false,"id":8,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+35942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+35942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+36241 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(2p)(296b), handled:2, sent:(2p)(186b)
+38246 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(2p)(296b), handled:2, sent:(2p)(186b)
+53255 [tio-group-12] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+53256 [tio-group-12] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+56048 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+56049 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+56073 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+56463 [tio-group-13] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+56493 [pool-2-thread-1] INFO  c.m.b.s.h.s.GenerateBlockRequestHandler - 收到来自于<wolf><请求生成Block>消息，block信息为[Block{blockHeader=BlockHeader{version=1, hashPreviousBlock='null', hashMerkleRoot='74dd2cc0024d21908be9b74ae9487f1bfaa2d07426f6dd11dcafcd9a19021999', publicKey='A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54', number=1, timeStamp=1527248400559, nonce=0, hashList=[ca631e2d7264b63d54fb606a546475bafef44ad2a5a17d58e93464885f8ba9f3]}, blockBody=BlockBody{instructions=[Instruction{json='{"content":"1"}', timeStamp=1527248400237, publicKey='A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54', sign='MEUCIQCq+20xBh5B6xzSOMKS4usa+XTgSKG8fpwo5eXDBNYRkQIgCAN0IJ8/ZSmD9MMfK9PCukhoBwwVpLB/1PkLW4j36x4=', hash='ca631e2d7264b63d54fb606a546475bafef44ad2a5a17d58e93464885f8ba9f3'}]}, hash='ec509ba7bae899a902572fd3f2c36d51253f311e69bc59175071cdadbd95f0dd'}]
+56494 [pool-2-thread-1] INFO  c.m.b.s.h.s.GenerateBlockRequestHandler - 校验结果:RpcCheckBlockBody{code=0, message='OK'}
+56501 [tio-group-15] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+56505 [pool-2-thread-1] INFO  c.m.b.s.h.server.PbftVoteHandler - 收到来自于<wolf><投票>消息，投票信息为[VoteMsg{voteType=2, hash='ec509ba7bae899a902572fd3f2c36d51253f311e69bc59175071cdadbd95f0dd', number=1, appId='wolf', agree=true}]
+60259 [tio-client-reconn-2] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2010 ms
+65939 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+65940 [tio-group-17] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+65940 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+65942 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+65942 [tio-group-20] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJhN2NmZjgxNS0zYTdkLTQ5MjQtYTkzOC1jZmJlMjAyZjU0ZmMiLCJyZXNwb25zZU1zZ0lkIjoiMjNmY2VjMDAtMzBjMC00M2FkLTkzMmItOWJiMzcwOGIwNTg5IiwidGltZSI6MTUyNzI0ODQxMDA0OH0=","byteCount":0,"fromCluster":false,"id":16,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+65942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+65942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+66243 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(3p)(444b), handled:3, sent:(5p)(2195b)
+68093 [http-nio-8080-exec-3] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+68248 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(3p)(444b), handled:3, sent:(5p)(2195b)
+79264 [tio-group-21] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+79265 [tio-group-21] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+86268 [tio-client-reconn-3] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2000 ms
+95940 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+95941 [tio-group-22] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+95941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+95942 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+95942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+95942 [tio-group-24] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI5MzMyODlhOC0zZGQ5LTQ3MDEtYTI2Yy1kOGFjZTQ2YmVhOTUiLCJyZXNwb25zZU1zZ0lkIjoiMzYyZmEwN2QtYzEwZi00ZmExLTk3MDctOTA2MWIwMmI5MWIyIiwidGltZSI6MTUyNzI0ODQ0MDA0OH0=","byteCount":0,"fromCluster":false,"id":20,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+95943 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+96244 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(4p)(592b), handled:4, sent:(6p)(2288b)
+98249 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(4p)(592b), handled:4, sent:(6p)(2288b)
+105270 [tio-group-26] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+105271 [tio-group-26] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+112274 [tio-client-reconn-4] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:1998 ms
+125299 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - 
+null
+ ├ 当前时间:1527248469398
+ ├ 连接统计
+ │ 	 ├ 共接受过连接数  :1
+ │ 	 ├ 当前连接数            :1
+ │ 	 ├ 异IP连接数           :1
+ │ 	 └ 关闭过的连接数  :0
+ ├ 消息统计
+ │ 	 ├ 已处理消息  :6
+ │ 	 ├ 已接收消息(packet/byte):6/2288
+ │ 	 ├ 已发送消息(packet/byte):4/592b
+ │ 	 ├ 平均每次TCP包接收的字节数  :381.3333333333333
+ │ 	 └ 平均每次TCP包接收的业务包  :1.0
+ └ IP统计时段 
+   	 └ []
+ ├ 节点统计
+ │ 	 ├ clientNodes :1
+ │ 	 ├ 所有连接               :1
+ │ 	 ├ 活动连接               :1
+ │ 	 ├ 关闭次数               :0
+ │ 	 ├ 绑定user数         :0
+ │ 	 ├ 绑定token数       :0
+ │ 	 └ 等待同步消息响应 :0
+ ├ 群组
+ │ 	 ├ channelmap  :0
+ │ 	 └ groupmap:0
+ └ 拉黑IP 
+   	 └ []
+125300 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - null, 检查心跳, 共1个连接, 取锁耗时0ms, 循环耗时10ms, 心跳超时时间:120000ms
+125939 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+125940 [tio-group-28] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+125943 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+125945 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+125946 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+125945 [tio-group-30] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJmYmRhNjJlZC0yNjA0LTQ1ZDAtOGM3OC0zNTAwYzkzZjhmYzIiLCJyZXNwb25zZU1zZ0lkIjoiZmYyMDJiNWQtMTYyMy00ZmQ0LTk0NjktOGUxMWVmMjIwN2U0IiwidGltZSI6MTUyNzI0ODQ3MDA1MH0=","byteCount":0,"fromCluster":false,"id":24,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+125949 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+126246 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(5p)(740b), handled:5, sent:(7p)(2381b)
+128251 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(5p)(740b), handled:5, sent:(7p)(2381b)
+131277 [tio-group-31] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+131280 [tio-group-31] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+138282 [tio-client-reconn-1] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2000 ms
+155939 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+155940 [tio-group-33] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+155941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+155941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+155942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+155942 [tio-group-35] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJmMTY3MDk1MS1hZDI1LTQwNjEtODhiYy0xOGMxMTI3ZmI5MzUiLCJyZXNwb25zZU1zZ0lkIjoiZjYzZjQ4NTMtM2EzZC00ZTI4LWE5NjEtNTcxMGJjZDIwM2RiIiwidGltZSI6MTUyNzI0ODUwMDA0N30=","byteCount":0,"fromCluster":false,"id":28,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+155942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+156247 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(6p)(888b), handled:6, sent:(8p)(2474b)
+157283 [tio-group-36] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+157284 [tio-group-36] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+158252 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(6p)(888b), handled:6, sent:(8p)(2474b)
+164287 [tio-client-reconn-2] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:1999 ms
+183289 [tio-group-37] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+183290 [tio-group-37] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+185938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+185943 [tio-group-38] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+185949 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+185950 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+185951 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+185951 [tio-group-41] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI5OThmZWI5Zi02Mjc0LTQzYzYtYWYwNi1lMmEyZTBiYjdiNzciLCJyZXNwb25zZU1zZ0lkIjoiZGZmMzk5NTEtYmUwMS00YTJlLWFkNjctZjNkYWNkNzA3NTg4IiwidGltZSI6MTUyNzI0ODUzMDA1Nn0=","byteCount":0,"fromCluster":false,"id":32,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+185954 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+186249 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(7p)(1036b), handled:7, sent:(9p)(2567b)
+188253 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(7p)(1036b), handled:7, sent:(9p)(2567b)
+190292 [tio-client-reconn-3] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2001 ms
+209294 [tio-group-42] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+209295 [tio-group-42] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+215940 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+215992 [tio-group-44] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+216082 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+216082 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+216086 [tio-group-46] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJhZGQ1ODFiYi02MGIyLTQzY2ItYTBiYi0yZDM0N2QyNjA3NTgiLCJyZXNwb25zZU1zZ0lkIjoiYmM0NjdhYjYtZjU4ZS00MzIxLTgwYzAtN2E2MWMyNzg3ODg1IiwidGltZSI6MTUyNzI0ODU2MDE4OH0=","byteCount":0,"fromCluster":false,"id":36,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+216086 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+216094 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+216249 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(8p)(1184b), handled:8, sent:(10p)(2660b)
+216297 [tio-client-reconn-4] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:1999 ms
+218253 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(8p)(1184b), handled:8, sent:(10p)(2660b)
+235299 [tio-group-47] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+235301 [tio-group-47] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+242304 [tio-client-reconn-1] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2000 ms
+245302 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - 
+null
+ ├ 当前时间:1527248589408
+ ├ 连接统计
+ │ 	 ├ 共接受过连接数  :1
+ │ 	 ├ 当前连接数            :1
+ │ 	 ├ 异IP连接数           :1
+ │ 	 └ 关闭过的连接数  :0
+ ├ 消息统计
+ │ 	 ├ 已处理消息  :10
+ │ 	 ├ 已接收消息(packet/byte):10/2660
+ │ 	 ├ 已发送消息(packet/byte):8/1184b
+ │ 	 ├ 平均每次TCP包接收的字节数  :266.0
+ │ 	 └ 平均每次TCP包接收的业务包  :1.0
+ └ IP统计时段 
+   	 └ []
+ ├ 节点统计
+ │ 	 ├ clientNodes :1
+ │ 	 ├ 所有连接               :1
+ │ 	 ├ 活动连接               :1
+ │ 	 ├ 关闭次数               :0
+ │ 	 ├ 绑定user数         :0
+ │ 	 ├ 绑定token数       :0
+ │ 	 └ 等待同步消息响应 :0
+ ├ 群组
+ │ 	 ├ channelmap  :0
+ │ 	 └ groupmap:0
+ └ 拉黑IP 
+   	 └ []
+245307 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - null, 检查心跳, 共1个连接, 取锁耗时0ms, 循环耗时0ms, 心跳超时时间:120000ms
+245938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+245939 [tio-group-49] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+245940 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+245942 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+245942 [tio-group-51] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI3NjNmZjIwOC01YTIwLTQwZmQtOGYyNy1kZTE2NTNkNmU2NzgiLCJyZXNwb25zZU1zZ0lkIjoiYWI4ZDMwMWItNjNlZi00MmM0LWEyMGUtZWY0NTI0ZGM4ZTQ2IiwidGltZSI6MTUyNzI0ODU5MDA0OH0=","byteCount":0,"fromCluster":false,"id":40,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+245942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+245943 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+246250 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(9p)(1332b), handled:9, sent:(11p)(2753b)
+248255 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(9p)(1332b), handled:9, sent:(11p)(2753b)
+261305 [tio-group-52] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+261306 [tio-group-52] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+268308 [tio-client-reconn-2] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2000 ms
+275939 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+275940 [tio-group-53] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+275941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+275942 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+275942 [tio-group-56] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiIxMzA2NTc1Ni0yZDFkLTQwYjctYWJlZi0wYTM4NWQ3ZmY5MDMiLCJyZXNwb25zZU1zZ0lkIjoiNTFhN2E0MGMtNDg4NC00OWE5LTg3OGMtNDY0ODVkYmU3YjgzIiwidGltZSI6MTUyNzI0ODYyMDA0OH0=","byteCount":0,"fromCluster":false,"id":44,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+275942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+275942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+276250 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(10p)(1480b), handled:10, sent:(12p)(2846b)
+278256 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(10p)(1480b), handled:10, sent:(12p)(2846b)
+287311 [tio-group-57] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+287315 [tio-group-57] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+294318 [tio-client-reconn-3] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:1999 ms
+305938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+305940 [tio-group-58] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+305945 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+305948 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+305948 [tio-group-61] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI5ODVkM2VlYy01MzRmLTRlOGEtYjZhZi1kYmI0Yzg3ZTkxYjgiLCJyZXNwb25zZU1zZ0lkIjoiYjhlNDE1MmQtYjk3Yy00MDQ2LWJiZGUtM2NjY2Y2MWRlMmE1IiwidGltZSI6MTUyNzI0ODY1MDA1M30=","byteCount":0,"fromCluster":false,"id":48,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+305948 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+305948 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+306051 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 本机IP：10.6.0.48
+306063 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 共有2个成员需要连接：[Member{appId='wolf', name='maida', ip='10.6.0.48'}, Member{appId='mingyi', name='mingyi', ip='10.1.0.187'}]
+306251 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(11p)(1628b), handled:11, sent:(13p)(2939b)
+308258 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(11p)(1628b), handled:11, sent:(13p)(2939b)
+313321 [tio-group-62] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+313324 [tio-group-62] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+320327 [tio-client-reconn-4] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2002 ms
+335939 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+335942 [tio-group-63] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+335989 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+335991 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+335991 [tio-group-65] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI4ZTk3NGJiNC02MWRmLTRkMjUtOWI2Ny00NmE5NzFlNzQ3OWIiLCJyZXNwb25zZU1zZ0lkIjoiMWJlZjhhYjQtN2U2Ni00MDJiLWIxYWYtYjBjY2M4ZDc3MThmIiwidGltZSI6MTUyNzI0ODY4MDA5Nn0=","byteCount":0,"fromCluster":false,"id":52,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+335991 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+335992 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+336251 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(12p)(1776b), handled:12, sent:(14p)(3032b)
+338268 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(12p)(1776b), handled:12, sent:(14p)(3032b)
+339329 [tio-group-67] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+339330 [tio-group-67] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+346332 [tio-client-reconn-1] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:1999 ms
+365312 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - 
+null
+ ├ 当前时间:1527248709418
+ ├ 连接统计
+ │ 	 ├ 共接受过连接数  :1
+ │ 	 ├ 当前连接数            :1
+ │ 	 ├ 异IP连接数           :1
+ │ 	 └ 关闭过的连接数  :0
+ ├ 消息统计
+ │ 	 ├ 已处理消息  :14
+ │ 	 ├ 已接收消息(packet/byte):14/3032
+ │ 	 ├ 已发送消息(packet/byte):12/1776b
+ │ 	 ├ 平均每次TCP包接收的字节数  :216.57142857142858
+ │ 	 └ 平均每次TCP包接收的业务包  :1.0
+ └ IP统计时段 
+   	 └ []
+ ├ 节点统计
+ │ 	 ├ clientNodes :1
+ │ 	 ├ 所有连接               :1
+ │ 	 ├ 活动连接               :1
+ │ 	 ├ 关闭次数               :0
+ │ 	 ├ 绑定user数         :0
+ │ 	 ├ 绑定token数       :0
+ │ 	 └ 等待同步消息响应 :0
+ ├ 群组
+ │ 	 ├ channelmap  :0
+ │ 	 └ groupmap:0
+ └ 拉黑IP 
+   	 └ []
+365313 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - null, 检查心跳, 共1个连接, 取锁耗时0ms, 循环耗时0ms, 心跳超时时间:120000ms
+365333 [tio-group-68] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+365334 [tio-group-68] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+365940 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+365940 [tio-group-69] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+365941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+365941 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+365941 [tio-group-72] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJlMWZlMzIzZi05ZWZhLTRjNjMtOTA0Yi0wZDdkMTgyZmVhNWMiLCJyZXNwb25zZU1zZ0lkIjoiMmZkNDRjYWUtYjliMy00ODllLWE0OTItYTRmN2MyMmJjZDkxIiwidGltZSI6MTUyNzI0ODcxMDA0N30=","byteCount":0,"fromCluster":false,"id":56,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+365941 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+365944 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+366251 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(13p)(1924b), handled:13, sent:(15p)(3125b)
+368269 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(13p)(1924b), handled:13, sent:(15p)(3125b)
+372336 [tio-client-reconn-2] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:1998 ms
+391337 [tio-group-73] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+391338 [tio-group-73] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+395938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+395939 [tio-group-76] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+395939 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+395940 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+395941 [tio-group-77] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJiZTFlMjBjNy1kOTQ1LTRlNzctYjA5Ni0xMDRlNzE1NWI5ZjkiLCJyZXNwb25zZU1zZ0lkIjoiMGVlNjk4ZWYtZDhiZi00MzAzLTg5ZGYtMDhkYTczOGQxNmNjIiwidGltZSI6MTUyNzI0ODc0MDA0Nn0=","byteCount":0,"fromCluster":false,"id":60,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+395941 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+395942 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+396252 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(14p)(2072b), handled:14, sent:(16p)(3218b)
+398274 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(14p)(2072b), handled:14, sent:(16p)(3218b)
+398340 [tio-client-reconn-3] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2011 ms
+417345 [tio-group-78] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+417347 [tio-group-78] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+424349 [tio-client-reconn-4] ERROR org.tio.client.AioClient - $UNKNOWN:1,重连耗时:2010 ms
+425938 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+425939 [tio-group-80] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+425940 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+425940 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+425941 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+425941 [tio-group-81] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56413, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJkNzg3YTdlYy1kNzZhLTQ3NjctYmM4OC1jM2FlMzE4ZTRkODEiLCJyZXNwb25zZU1zZ0lkIjoiNzkzNTFmZTgtNmZhZC00YWMzLTkzYjItZDk4ZWI0ZjcxZGM3IiwidGltZSI6MTUyNzI0ODc3MDA0Nn0=","byteCount":0,"fromCluster":false,"id":64,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+425941 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+426253 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(15p)(2220b), handled:15, sent:(17p)(3311b)
+428275 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:1, closed:0, received:(15p)(2220b), handled:15, sent:(17p)(3311b)
+431274 [tio-group-84] INFO  c.m.b.s.s.BlockServerAioListener - onAfterConnected channelContext:192.168.179.1:56550, isConnected:true, isReconnect:false
+434423 [tio-33] INFO  org.tio.core.CloseRunnable - org.tio.server.ServerGroupContext@112b54d3, 192.168.179.1:56550 准备关闭连接, isNeedRemove:true, 对方关闭了连接
+434426 [tio-33] INFO  org.tio.core.ChannelContext - 关闭前192.168.179.1:56550, 关闭后$UNKNOWN:2
+443360 [tio-group-85] ERROR o.t.c.ConnectionCompletionHandler - java.io.IOException: 信号灯超时时间已到
+
+java.io.IOException: 信号灯超时时间已到
+
+	at sun.nio.ch.Iocp.translateErrorToIOException(Iocp.java:309)
+	at sun.nio.ch.Iocp.access$700(Iocp.java:46)
+	at sun.nio.ch.Iocp$EventHandlerTask.run(Iocp.java:399)
+	at java.lang.Thread.run(Thread.java:748)
+443361 [tio-group-85] INFO  c.m.b.s.c.BlockClientAioListener - 连接失败：server地址为-10.1.0.187:6789
+728  [main] INFO  c.m.b.MdBlockchainApplication - Starting MdBlockchainApplication on LAPTOP-6RNJ5VAG with PID 1420 (started by lenovo in E:\学习区块链\md_blockchain)
+743  [main] INFO  c.m.b.MdBlockchainApplication - No active profile set, falling back to default profiles: default
+814  [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:46:31 CST 2018]; root of context hierarchy
+2519 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef3ba5b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3112 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+3121 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3122 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.27
+3225 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+3226 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2412 ms
+3401 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+3406 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+3407 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+3409 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+3409 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+3801 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+3816 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+3948 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+3950 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+3953 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+4050 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+4179 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4186 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: com.mindata.blockchain.core.sqlite.config.SQLiteDialect
+4202 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+4509 [main] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+4652 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+5494 [main] WARN  org.tio.server.AioServer - null started, listen on 0.0.0.0:6789
+5817 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41fbdac4: startup date [Fri May 25 19:46:31 CST 2018]; root of context hierarchy
+5872 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.add(com.mindata.blockchain.core.requestbody.BlockRequestBody) throws com.mindata.blockchain.common.exception.TrustSDKException
+5875 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.test(java.lang.String) throws java.lang.Exception
+5876 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sync],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sync(org.springframework.data.domain.Pageable)
+5877 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite/content],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.content()
+5877 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/db],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.getRockDB()
+5879 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/next],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.nextBlock()
+5879 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/block/sqlite],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.BlockController.sqlite()
+5879 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/instruction],methods=[POST]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.InstructionController.build(com.mindata.blockchain.core.requestbody.InstructionBody) throws java.lang.Exception
+5880 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/pairKey/random],methods=[GET]}" onto public com.mindata.blockchain.core.bean.BaseData com.mindata.blockchain.core.controller.PairKeyController.generate() throws com.mindata.blockchain.common.exception.TrustSDKException
+5882 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+5882 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+5907 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5907 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+5940 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+6145 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+6160 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+6201 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+6296 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 本机IP：10.6.0.48
+6388 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 共有2个成员需要连接：[Member{appId='wolf', name='maida', ip='10.6.0.48'}, Member{appId='mingyi', name='mingyi', ip='192.168.179.1'}]
+6399 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 开始绑定:192.168.179.1:6789
+6400 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:0, closed:0, received:(0p)(0b), handled:0, sent:(0p)(0b)
+6410 [tio-group-3] INFO  c.m.b.s.s.BlockServerAioListener - onAfterConnected channelContext:192.168.179.1:56565, isConnected:true, isReconnect:false
+8403 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 绑定192.168.179.1:6789失败
+8405 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 开始绑定:10.6.0.48:6789
+8410 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:0, closed:0, received:(0p)(0b), handled:0, sent:(0p)(0b)
+8411 [tio-group-4] INFO  c.m.b.s.s.BlockServerAioListener - onAfterConnected channelContext:10.6.0.48:56567, isConnected:true, isReconnect:false
+10412 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - 绑定10.6.0.48:6789失败
+10412 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+10413 [tio-group-2] INFO  o.t.c.ConnectionCompletionHandler - connected to 192.168.179.1:6789
+10414 [tio-group-2] INFO  c.m.b.s.c.BlockClientAioListener - 连接成功：server地址为-192.168.179.1:6789
+10413 [tio-group-1] INFO  o.t.c.ConnectionCompletionHandler - connected to 10.6.0.48:6789
+10415 [tio-group-1] INFO  c.m.b.s.c.BlockClientAioListener - 连接成功：server地址为-10.6.0.48:6789
+10518 [tio-group-5] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+10518 [tio-group-6] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+10529 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+10538 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+10541 [pool-3-thread-1] INFO  c.m.b.c.manager.PermissionManager - 所有的权限信息：{message=[Permission{tableName='message', permissionType=2, publicKey='*', groupId='1'}]}
+10548 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+10549 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+10551 [tio-group-9] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJhZTk3ZDkxMS00YTAyLTRmOTMtOTNkMC01ZGM4MzIzNDQ0OWQiLCJyZXNwb25zZU1zZ0lkIjoiOGRlYTA3MTUtMGU5NC00MDNjLWI4MDctOWJmZTViNjFmMTg0IiwidGltZSI6MTUyNzI0ODgwMTA0OH0=","byteCount":0,"fromCluster":false,"id":4,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+12207 [main] INFO  c.m.b.socket.client.ClientStarter - 开始群发信息获取next Block
+12209 [tio-group-11] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+12209 [tio-group-12] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+12209 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+12209 [main] INFO  c.m.b.MdBlockchainApplication - Started MdBlockchainApplication in 11.977 seconds (JVM running for 12.705)
+12211 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+12211 [tio-group-16] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiIxMjJmZTQ5Ni1kMjJiLTQ5NjAtYTI4Ny0wZmNjYTZhNzQzOTciLCJyZXNwb25zZU1zZ0lkIjoiOThhNmY5ZTEtNTgwZi00M2I0LTkwZjYtNzQ0MTE0YjVhMmI3IiwidGltZSI6MTUyNzI0ODgwMjcyOH0=","byteCount":0,"fromCluster":false,"id":9,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+12210 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+12211 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+12211 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+12211 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+12212 [tio-group-17] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56567, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJhNWYyZGQyMi00MzBmLTRjNzAtOGI2Ny00ZmJlNjJkMjEyYjEiLCJyZXNwb25zZU1zZ0lkIjoiOThhNmY5ZTEtNTgwZi00M2I0LTkwZjYtNzQ0MTE0YjVhMmI3IiwidGltZSI6MTUyNzI0ODgwMjcyOX0=","byteCount":0,"fromCluster":false,"id":11,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+12212 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+12213 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+36165 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+36168 [tio-group-20] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+36168 [tio-group-22] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+36170 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+36175 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+36176 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+36177 [tio-group-23] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiIzNzEyNDgwZi01NzRlLTRjZWItYTlmMy04MmU2NTYxYjY3OTkiLCJyZXNwb25zZU1zZ0lkIjoiYWJmNDcxOTctZmE0NS00ZWJlLThkMzktNDczYWJkMjNmYWU0IiwidGltZSI6MTUyNzI0ODgyNjY5M30=","byteCount":0,"fromCluster":false,"id":16,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+36178 [tio-group-25] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56567, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJkMWQ0NjYyZS00MzI1LTQ1OTUtYjczZS0zYWQyMmE0ZTdkYmYiLCJyZXNwb25zZU1zZ0lkIjoiYWJmNDcxOTctZmE0NS00ZWJlLThkMzktNDczYWJkMjNmYWU0IiwidGltZSI6MTUyNzI0ODgyNjY5NX0=","byteCount":0,"fromCluster":false,"id":18,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+36178 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+36178 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+36181 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+36182 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+36182 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+36402 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(5p)(740b), handled:5, sent:(6p)(558b)
+38413 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(5p)(740b), handled:5, sent:(6p)(558b)
+66164 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+66165 [tio-group-27] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+66165 [tio-group-28] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+66165 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+66166 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+66167 [tio-group-31] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI1YjhhMjE5My03ODY5LTRlOTMtOTg5Yi00NzZkMGM2NDA3OGQiLCJyZXNwb25zZU1zZ0lkIjoiODYxMmU3MjEtZDYyNy00OTA1LTkyNGItODBiZjliNWEyZjY4IiwidGltZSI6MTUyNzI0ODg1NjY4NH0=","byteCount":0,"fromCluster":false,"id":23,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+66167 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+66167 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+66167 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+66167 [tio-group-34] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56567, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJlZDI2YTY4NC01NmQwLTQ2MGEtOTk3Yi04Y2ViYTY5ODM3YzIiLCJyZXNwb25zZU1zZ0lkIjoiODYxMmU3MjEtZDYyNy00OTA1LTkyNGItODBiZjliNWEyZjY4IiwidGltZSI6MTUyNzI0ODg1NjY4NX0=","byteCount":0,"fromCluster":false,"id":25,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+66168 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+66168 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+66168 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+66403 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(7p)(1036b), handled:7, sent:(8p)(744b)
+68415 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(7p)(1036b), handled:7, sent:(8p)(744b)
+96166 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+96168 [tio-group-35] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+96168 [tio-group-38] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+96169 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+96170 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+96171 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+96171 [tio-group-40] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI5NGE3OTg4MC00YzNkLTQ3NjEtOGQyNS1hYjVjY2FjNDczZGIiLCJyZXNwb25zZU1zZ0lkIjoiYTczNmM2ZGUtZWIxOS00ODkwLTkwY2YtNTA3NGM3Zjc4YTM3IiwidGltZSI6MTUyNzI0ODg4NjY4OH0=","byteCount":0,"fromCluster":false,"id":30,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+96175 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+96176 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+96179 [tio-group-41] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56567, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI1ZWY0YWU5YS02NGI3LTQxN2ItOWFhMi04NTVkMWQwZWI2NDMiLCJyZXNwb25zZU1zZ0lkIjoiYTczNmM2ZGUtZWIxOS00ODkwLTkwY2YtNTA3NGM3Zjc4YTM3IiwidGltZSI6MTUyNzI0ODg4NjY5NX0=","byteCount":0,"fromCluster":false,"id":32,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+96178 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+96182 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+96183 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+96404 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(9p)(1332b), handled:9, sent:(10p)(930b)
+98417 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(9p)(1332b), handled:9, sent:(10p)(930b)
+125496 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - 
+null
+ ├ 当前时间:1527248916005
+ ├ 连接统计
+ │ 	 ├ 共接受过连接数  :2
+ │ 	 ├ 当前连接数            :2
+ │ 	 ├ 异IP连接数           :2
+ │ 	 └ 关闭过的连接数  :0
+ ├ 消息统计
+ │ 	 ├ 已处理消息  :10
+ │ 	 ├ 已接收消息(packet/byte):10/930
+ │ 	 ├ 已发送消息(packet/byte):9/1332b
+ │ 	 ├ 平均每次TCP包接收的字节数  :93.0
+ │ 	 └ 平均每次TCP包接收的业务包  :1.0
+ └ IP统计时段 
+   	 └ []
+ ├ 节点统计
+ │ 	 ├ clientNodes :2
+ │ 	 ├ 所有连接               :2
+ │ 	 ├ 活动连接               :2
+ │ 	 ├ 关闭次数               :0
+ │ 	 ├ 绑定user数         :0
+ │ 	 ├ 绑定token数       :0
+ │ 	 └ 等待同步消息响应 :0
+ ├ 群组
+ │ 	 ├ channelmap  :0
+ │ 	 └ groupmap:0
+ └ 拉黑IP 
+   	 └ []
+125498 [tio-timer-checkheartbeat-2] INFO  org.tio.server.ServerGroupContext - null, 检查心跳, 共2个连接, 取锁耗时0ms, 循环耗时9ms, 心跳超时时间:120000ms
+126164 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+126165 [tio-group-44] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+126165 [tio-group-43] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+126166 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+126167 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+126167 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+126168 [tio-group-47] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI4ZjUxZGI4OC0xNjMzLTRhMGMtOGI1Ni1iZWE2YjA2ZDlmNTkiLCJyZXNwb25zZU1zZ0lkIjoiODY5NzliZTAtNzIwZS00Y2E4LWEzOTEtYmQ4ODUxYjc3MTE4IiwidGltZSI6MTUyNzI0ODkxNjY4NX0=","byteCount":0,"fromCluster":false,"id":37,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+126168 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+126168 [tio-group-48] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56567, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI1ZGIwOGFmOS1kNzdmLTQ0YTYtODVhNi0wYTdiMDA0NTU3ZGEiLCJyZXNwb25zZU1zZ0lkIjoiODY5NzliZTAtNzIwZS00Y2E4LWEzOTEtYmQ4ODUxYjc3MTE4IiwidGltZSI6MTUyNzI0ODkxNjY4Nn0=","byteCount":0,"fromCluster":false,"id":39,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+126168 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+126169 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+126169 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+126169 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+126404 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(11p)(1628b), handled:11, sent:(12p)(1116b)
+128420 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(11p)(1628b), handled:11, sent:(12p)(1116b)
+148216 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+148216 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+148238 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+148555 [tio-group-52] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+148571 [tio-group-53] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+148592 [pool-2-thread-1] INFO  c.m.b.s.h.s.GenerateBlockRequestHandler - 收到来自于<wolf><请求生成Block>消息，block信息为[Block{blockHeader=BlockHeader{version=1, hashPreviousBlock='null', hashMerkleRoot='74dd2cc0024d21908be9b74ae9487f1bfaa2d07426f6dd11dcafcd9a19021999', publicKey='A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54', number=1, timeStamp=1527248939064, nonce=0, hashList=[ca631e2d7264b63d54fb606a546475bafef44ad2a5a17d58e93464885f8ba9f3]}, blockBody=BlockBody{instructions=[Instruction{json='{"content":"1"}', timeStamp=1527248938803, publicKey='A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54', sign='MEUCIQCq+20xBh5B6xzSOMKS4usa+XTgSKG8fpwo5eXDBNYRkQIgCAN0IJ8/ZSmD9MMfK9PCukhoBwwVpLB/1PkLW4j36x4=', hash='ca631e2d7264b63d54fb606a546475bafef44ad2a5a17d58e93464885f8ba9f3'}]}, hash='537c71dd571a5f5d78302455d8c29db4ad296e742b32cc3ecac2102582f4b7b5'}]
+148593 [pool-2-thread-1] INFO  c.m.b.s.h.s.GenerateBlockRequestHandler - 校验结果:RpcCheckBlockBody{code=0, message='OK'}
+148599 [pool-2-thread-1] INFO  c.m.b.s.h.s.GenerateBlockRequestHandler - 收到来自于<wolf><请求生成Block>消息，block信息为[Block{blockHeader=BlockHeader{version=1, hashPreviousBlock='null', hashMerkleRoot='74dd2cc0024d21908be9b74ae9487f1bfaa2d07426f6dd11dcafcd9a19021999', publicKey='A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54', number=1, timeStamp=1527248939064, nonce=0, hashList=[ca631e2d7264b63d54fb606a546475bafef44ad2a5a17d58e93464885f8ba9f3]}, blockBody=BlockBody{instructions=[Instruction{json='{"content":"1"}', timeStamp=1527248938803, publicKey='A8WLqHTjcT/FQ2IWhIePNShUEcdCzu5dG+XrQU8OMu54', sign='MEUCIQCq+20xBh5B6xzSOMKS4usa+XTgSKG8fpwo5eXDBNYRkQIgCAN0IJ8/ZSmD9MMfK9PCukhoBwwVpLB/1PkLW4j36x4=', hash='ca631e2d7264b63d54fb606a546475bafef44ad2a5a17d58e93464885f8ba9f3'}]}, hash='537c71dd571a5f5d78302455d8c29db4ad296e742b32cc3ecac2102582f4b7b5'}]
+148600 [pool-2-thread-1] INFO  c.m.b.s.h.s.GenerateBlockRequestHandler - 校验结果:RpcCheckBlockBody{code=0, message='OK'}
+148600 [tio-group-56] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+148600 [tio-group-55] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+148605 [pool-2-thread-1] INFO  c.m.b.s.h.server.PbftVoteHandler - 收到来自于<wolf><投票>消息，投票信息为[VoteMsg{voteType=2, hash='537c71dd571a5f5d78302455d8c29db4ad296e742b32cc3ecac2102582f4b7b5', number=1, appId='wolf', agree=true}]
+148611 [pool-2-thread-1] INFO  c.m.b.s.h.server.PbftVoteHandler - 收到来自于<wolf><投票>消息，投票信息为[VoteMsg{voteType=2, hash='537c71dd571a5f5d78302455d8c29db4ad296e742b32cc3ecac2102582f4b7b5', number=1, appId='wolf', agree=true}]
+156163 [pool-3-thread-1] INFO  c.m.b.socket.client.ClientStarter - ---------开始心跳包--------
+156167 [tio-group-59] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+156168 [tio-group-60] INFO  c.m.b.s.s.BlockServerAioListener - onAfterReceived channelContext:{}, packet:{}, packetSize:{}
+156172 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+156180 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+156181 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 收到来自于<wolf>的<请求下一Block>消息，请求者的block hash为：null
+156181 [tio-group-64] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:192.168.179.1:56565, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiJjNDI5MjEyOS1hYzVmLTQ3NzgtOGNiMi1kZWIxN2Y1N2I4ZDciLCJyZXNwb25zZU1zZ0lkIjoiNjQ1MGUyMmEtNGY4Zi00NDU2LWI1YTUtYjk3MjIzYzI0M2Y4IiwidGltZSI6MTUyNzI0ODk0NjY5OH0=","byteCount":0,"fromCluster":false,"id":50,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+156181 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+156181 [pool-2-thread-1] INFO  c.m.b.s.h.s.TotalBlockInfoRequestHandler - 回复给<wolf>，我的nextBlock是RpcNextBlockBody{hash='null', prevHash='null'}
+156182 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+156182 [tio-group-66] INFO  c.m.b.s.s.BlockServerAioListener - onAfterSent channelContext:10.6.0.48:56567, packet:{"blockSend":false,"body":"eyJhcHBJZCI6IndvbGYiLCJtZXNzYWdlSWQiOiI4NWE5YjU5NS01YTM3LTQxNDktYjE4Ny1kOWQxNmRmNDRhZjciLCJyZXNwb25zZU1zZ0lkIjoiNjQ1MGUyMmEtNGY4Zi00NDU2LWI1YTUtYjk3MjIzYzI0M2Y4IiwidGltZSI6MTUyNzI0ODk0NjY5OX0=","byteCount":0,"fromCluster":false,"id":52,"sslEncrypted":false,"synSeq":0,"type":-5}, isSentSuccess:true
+156182 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 收到来自于<wolf>的回复，下一个Block hash为：null
+156183 [pool-2-thread-2] INFO  c.m.b.s.h.c.TotalBlockInfoResponseHandler - 和<wolf>相比，本地已是最新块了
+156405 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(13p)(1924b), handled:13, sent:(18p)(5134b)
+158422 [tio-timer-heartbeat1] INFO  org.tio.client.AioClient - [1]: curr:2, closed:0, received:(13p)(1924b), handled:13, sent:(18p)(5134b)
+159973 [http-nio-8080-exec-3] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
